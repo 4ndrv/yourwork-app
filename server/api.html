@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>YourWork App API</title>
+  </head>
+  <body>
+    <style>
+      body {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(184, 169, 107);
+      }
+      .header {
+        font-size: 50px;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+        margin-bottom: 30px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 60px;
+        background-color: rgb(0 0 0 / 10%);
+      }
+      .title {
+        margin-bottom: 20px;
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.781);
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .desc {
+        display: flex;
+        justify-content: space-between;
+      }
+      .name {
+        margin-bottom: 10px;
+      }
+    </style>
+    <section class="header">YourWork App API Services</section>
+    <section class="content">
+      <div class="title">Users:</div>
+      <div class="item">
+        <div class="name">SignUp:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/signup <br />
+            { userName: req.body.userName, <br />
+            password: req.body.password }
+          </div>
+          <div class="method">POST</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Login:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/login<br />
+            { userName: req.body.userName, <br />
+            password: req.body.password }
+          </div>
+          <div class="method">POST</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Logout:</div>
+        <div class="desc">
+          <div class="url">https://yourwork.herokuapp.com/api/logout</div>
+          <div class="method">GET</div>
+        </div>
+      </div>
+      <div class="title">File:</div>
+      <div class="item">
+        <div class="name">Get file:</div>
+        <div class="desc">
+          <div class="url">https://yourwork.herokuapp.com/api/folders</div>
+          <div class="method">GET</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Create file:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/folders <br />
+            { name: req.body.name, <br />
+            type: req.body.type, <br />
+            containBy: req.body.containBy,}
+          </div>
+          <div class="method">POST</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Delete file:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/folders/delete <br />
+            { fileId: req.body.fileId }
+          </div>
+          <div class="method">DELETE</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Rename file:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/folders/rename <br />
+            { fileId: req.body.fileId, <br />
+            fileName: req.body.fileName }
+          </div>
+          <div class="method">PUT</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Move file:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/folders/move <br />
+            { fileId: req.body.fileId, <br />
+            toId: req.body.toId }
+          </div>
+          <div class="method">PUT</div>
+        </div>
+      </div>
+      <div class="title">Todo:</div>
+      <div class="item">
+        <div class="name">Get data:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/:filehanlde
+          </div>
+          <div class="method">GET</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Create todo data:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/create <br />
+            { name: req.body.name, <br />
+            fileHandle: req.body.fileHandle }
+          </div>
+          <div class="method">Post</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Add todo list:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/add <br />
+            { todo: req.body.name, <br />
+            fileHandle: req.body.fileHandle }
+          </div>
+          <div class="method">Post</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">delete todo:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/delete <br />
+            { todo: req.body.name, <br />
+            fileHandle: req.body.fileHandle }
+          </div>
+          <div class="method">delete</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Toggle done todo:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/done <br />
+            { todo: req.body.name, <br />
+            fileHandle: req.body.fileHandle }
+          </div>
+          <div class="method">PUT</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="name">Delete todo data:</div>
+        <div class="desc">
+          <div class="url">
+            https://yourwork.herokuapp.com/api/todos/delete/:filehanlde
+          </div>
+          <div class="method">DELETE</div>
+        </div>
+      </div>
+    </section>
+    <script></script>
+  </body>
+</html>
