@@ -24,14 +24,6 @@ code {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fullscreen {
-  width: 100% !important;
-  height: 100% !important;
-  top: 0 !important;
-  left: 0 !important;
-  border-radius: 0px !important;
-}
-
 .transition {
   transition: all 0.3s ease-in-out;
 }

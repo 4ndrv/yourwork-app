@@ -40,7 +40,9 @@ app.use('/api/folders', verifyAuth, folderRoute);
 app.use('/api/todos', verifyAuth, todoRoute);
 
 
+
+
+
 app.listen(process.env.PORT || 5000, () => {
     console.log("Starting Server...");
-    console.log(port);
 })

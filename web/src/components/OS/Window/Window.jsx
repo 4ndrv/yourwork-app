@@ -55,4 +55,12 @@ const WindowStyled = styled.div`
     display: none;
     transition: all 0.5s ease-ease-in-out;
   }
+  &.fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0px !important;
+  }
 `;
