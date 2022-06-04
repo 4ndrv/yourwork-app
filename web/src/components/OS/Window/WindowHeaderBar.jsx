@@ -66,24 +66,19 @@ const WindowHeaderBar = ({ rank, name }) => {
       window.getBoundingClientRect().top + (offsetY - startPoint[1]);
     window.style.transform = `translate(${leftPos}px, ${topPos}px)`;
     //set temp Pos
-    localStorage.setItem(`${name}`, JSON.stringify({ leftPos, topPos }));
+    setWindowTempPos([leftPos, topPos]);
   };
   // maximize button
   const changeFullScreen = () => {
     const window = document.querySelector(`.${name}`);
     window.style.transition = `all 0.2s ease-in-out`;
     if (!isFullScreen) {
-      setWindowTempPos([
-        window.getBoundingClientRect().x,
-        window.getBoundingClientRect().y,
-      ]);
       setFullScreen(true);
       window.classList.add("fullscreen");
     } else {
       window.classList.remove("fullscreen");
       setFullScreen(false);
-      window.style.left = `${windowTempPos[0]}px`;
-      window.style.top = `${windowTempPos[1]}px`;
+      window.style.transform = `translate(${windowTempPos[0]}px, ${windowTempPos[1]}px)`;
     }
     setTimeout(() => {
       window.style.transition = "";
