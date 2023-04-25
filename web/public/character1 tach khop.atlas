@@ -1,0 +1,51 @@
+character1 tach khop.png
+size:1971,1577
+filter:Linear,Linear
+pma:true
+bap_tay_P
+bounds:1174,811,772,524
+bap_tay_T
+bounds:743,1022,355,429
+rotate:90
+canh_tay_P
+bounds:354,1084,327,387
+rotate:90
+chuoi_kiem
+bounds:133,1478,97,192
+rotate:90
+dau
+bounds:2,1164,261,350
+rotate:90
+day_that_lung
+bounds:1117,1379,196,214
+rotate:90
+giap_vai_P
+bounds:1598,1337,371,238
+khien
+bounds:2,2,633,619
+kiem
+bounds:2,623,397,1124
+rotate:90
+tay_P
+bounds:1333,1366,209,263
+rotate:90
+than
+bounds:1128,247,562,730
+rotate:90
+that_lung
+bounds:601,1413,514,162
+toc
+bounds:327,1427,272,148
+toc mai
+bounds:2,1551,24,50
+rotate:90
+toc mai1
+bounds:54,1547,28,77
+rotate:90
+
+character1 tach khop_2.png
+size:1425,905
+filter:Linear,Linear
+pma:true
+chan
+bounds:2,2,1421,901
